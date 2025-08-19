@@ -6,43 +6,59 @@
   <title>CE 8930: Cybersecurity of Cyber-Physical Systems</title>
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
   <style>
-    /* Body with background image */
     body {
       font-family: 'Roboto', sans-serif;
       margin: 0;
-      color: black; /* Default text color */
+      color: black;
       line-height: 1.6;
-      position: relative;
       min-height: 100vh;
       background: 
-        linear-gradient(rgba(255,255,255,0.85), rgba(255,255,255,0.85)), /* white overlay for opacity */
+        linear-gradient(rgba(255,255,255,0.85), rgba(255,255,255,0.85)),
         url('background-image.jpeg') no-repeat center center fixed;
       background-size: cover;
     }
 
     header {
-      background: none; /* remove previous gradient */
-      color: red; /* Level 1 headings will be red */
-      padding: 2rem;
       text-align: center;
+      padding: 2rem;
     }
 
     header h1 {
       margin: 0.5rem 0 0;
       font-size: 2rem;
-      color: red; /* Level 1 heading color */
+      color: red;
     }
 
     header p {
       margin: 0.5rem 0 0;
       font-size: 1.1rem;
-      color: black; /* other text black */
+      color: black;
     }
 
     header img {
-      max-height: 160px; /* double the previous 80px */
+      max-height: 160px;
       display: block;
       margin: 0 auto 1rem;
+    }
+
+    nav {
+      background-color: #001f4d;
+      padding: 0.5rem;
+      text-align: center;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin: 0 1rem;
+      font-weight: bold;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
     }
 
     main {
@@ -53,7 +69,7 @@
 
     section {
       margin-bottom: 2rem;
-      background: rgba(255, 255, 255, 0.95); /* slightly transparent */
+      background: rgba(255, 255, 255, 0.95);
       padding: 1.5rem;
       border-radius: 8px;
       box-shadow: 0 2px 6px rgba(0,0,0,0.1);
@@ -61,12 +77,35 @@
 
     section h2 {
       margin-top: 0;
-      color: #001f4d; /* dark blue */
+      color: #001f4d;
     }
 
     ul li {
-      color: black; /* all other text black */
       margin-bottom: 0.5rem;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 1rem;
+    }
+
+    th, td {
+      padding: 8px;
+      border: 1px solid #ddd;
+    }
+
+    th {
+      background-color: #001f4d;
+      color: white;
+    }
+
+    blockquote {
+      background: #f9f9f9;
+      border-left: 5px solid #ccc;
+      margin: 1rem 0;
+      padding: 0.5rem 1rem;
+      font-style: italic;
     }
 
     footer {
@@ -80,31 +119,46 @@
 
     .instructor {
       font-weight: bold;
-      color: black;
     }
   </style>
 </head>
 <body>
 
 <header>
-  <!-- Logo -->
   <img src="TRACR-Logo.png" alt="Course Logo">
   <h1>CE 8930<br>Cybersecurity of Cyber-Physical Systems (CPS)</h1>
   <p>Graduate Level | 3 Credit Hours | Instruction Method: Hybrid</p>
+  <p>In-person Class Location: Lowry Hall, Room #115</p>
 </header>
 
+<nav>
+  <a href="#instructors">Instructors</a>
+  <a href="#description">Description</a>
+  <a href="#topics">Topics</a>
+  <a href="#books">Books</a>
+  <a href="#grading">Grading</a>
+  <a href="#project">Project</a>
+  <a href="#policies">Policies</a>
+  <a href="#neatness">Neatness</a>
+  <a href="#exams">Exams</a>
+  <a href="#integrity">Integrity</a>
+  <a href="#emergency">Emergency</a>
+  <a href="#accessibility">Accessibility</a>
+  <a href="#titleix">Title IX</a>
+</nav>
+
 <main>
-  <section>
+  <section id="instructors">
     <h2>Instructors</h2>
     <p class="instructor">Primary Instructor:<br>Dr. M Sabbir Salek</p>
     <p>Senior Engineer, USDOT National Center for Transportation Cybersecurity and Resiliency (TraCR)</p>
     <p>Email: msalek@clemson.edu</p>
-    <p class="instructor">Guest Instructor:<br>Dr. Mashrur “Ronnie” Chowdhury</p>
+    <p class="instructor">Guest Professor:<br>Dr. Mashrur “Ronnie” Chowdhury</p>
     <p>Director, USDOT National Center for Transportation Cybersecurity and Resiliency (TraCR)</p>
     <p>Email: mac@clemson.edu</p>
   </section>
 
-  <section>
+  <section id="description">
     <h2>Course Description</h2>
     <p>Cyber-Physical Systems (CPS) form the technological backbone of critical infrastructure sectors such as transportation, energy, healthcare, and space operations. By integrating computation, networking, and physical processes, CPSs enable intelligent monitoring, automation, and control. However, this seamless integration across cyber and physical systems also introduces unique and often severe cybersecurity risks. Attacks targeting CPSs can manipulate cyber and physical systems through software exploits or hardware-level intrusions, potentially bypassing conventional IT security measures and causing real-world consequences.</p>
     <p>This advanced graduate-level course provides an in-depth examination of the cybersecurity landscape for CPS, with a strong emphasis on both software and hardware security. Students will explore foundational and emerging cybersecurity techniques to secure CPSs against complex, persistent, and multi-vector threats.</p>
@@ -113,7 +167,7 @@
     <p>This course is ideal for graduate students and professionals seeking advanced expertise at the intersection of complex CPS, cybersecurity, and critical infrastructure protection.</p>
   </section>
 
-  <section>
+  <section id="topics">
     <h2>Topics Covered in This Course</h2>
     <ul>
       <li>Cyber-Physical Systems (CPS) and Their Components</li>
@@ -134,19 +188,103 @@
     </ul>
   </section>
 
-  <section>
+  <section id="books">
     <h2>Reference Books</h2>
-      <ul>
-        <li>Amitava Choudhury, Keshav Kaushik, Vinay Kumar, Binod Kumar Singh (2025). <em>Cyber-Physical Systems Security: A Multi-disciplinary Approach</em>. ISBN: 978-981-97-5736-7.</li>
-        <li>Bharat Bhushan, Sudhir Kumar Sharma, Parma Nand, Achyut Shankar, Ahmed J Obaid (2024). <em>Emerging Trends for Securing Cyber Physical Systems and the Internet of Things</em>. ISBN: 978-1-032-39294-3.</li>
-        <li>Shantanu Pal, Zahra Jadidi, Ernest Foo (2022). <em>Secure and Trusted Cyber Physical Systems: Recent Approaches and Future Directions</em>. ISBN: 978-3-031-08272-6.</li>
-        <li>Ali Ismail Awad, Steven Furnell, Marcin Paprzycki, Sudhir Kumar Sharma (2021). <em>Security in Cyber-Physical Systems: Foundations and Applications</em>. ISBN: 978-3-030-67363-5.</li>
-        <li>Yassine Maleh, Mohammad Shojafar, Ashraf Darwish, Abdelkrim Haqiq (2019). <em>Cybersecurity and Privacy in Cyber Physical Systems (1st Ed)</em>. ISBN: 978-1-032-40151-5.</li>
-        <li>Houbing Song, Glenn A. Fink, Sabina Jeschke (2017). <em>Security and Privacy in Cyber-Physical Systems: Foundations, Principles, and Applications</em>. ISBN: 978-1-119-22604-8.</li>
-        <li>Ryan Fries, Mashrur Chowdhury, Jeffrey Brummond (2008). <em>Transportation Infrastructure Security Utilizing Intelligent Transportation Systems</em>. ISBN: 978-0-470-28629-6.</li>
-      </ul>
+    <ul>
+      <li>Amitava Choudhury, Keshav Kaushik, Vinay Kumar, Binod Kumar Singh (2025). <em>Cyber-Physical Systems Security: A Multi-disciplinary Approach</em>. ISBN: 978-981-97-5736-7.</li>
+      <li>Bharat Bhushan, Sudhir Kumar Sharma, Parma Nand, Achyut Shankar, Ahmed J Obaid (2024). <em>Emerging Trends for Securing Cyber Physical Systems and the Internet of Things</em>. ISBN: 978-1-032-39294-3.</li>
+      <li>Shantanu Pal, Zahra Jadidi, Ernest Foo (2022). <em>Secure and Trusted Cyber Physical Systems</em>. ISBN: 978-3-031-08272-6.</li>
+      <li>Ali Ismail Awad, Steven Furnell, Marcin Paprzycki, Sudhir Kumar Sharma (2021). <em>Security in Cyber-Physical Systems</em>. ISBN: 978-3-030-67363-5.</li>
+      <li>Yassine Maleh, Mohammad Shojafar, Ashraf Darwish, Abdelkrim Haqiq (2019). <em>Cybersecurity and Privacy in Cyber Physical Systems</em>. ISBN: 978-1-032-40151-5.</li>
+      <li>Houbing Song, Glenn A. Fink, Sabina Jeschke (2017). <em>Security and Privacy in Cyber-Physical Systems</em>. ISBN: 978-1-119-22604-8.</li>
+      <li>Ryan Fries, Mashrur Chowdhury, Jeffrey Brummond (2008). <em>Transportation Infrastructure Security Utilizing Intelligent Transportation Systems</em>. ISBN: 978-0-470-28629-6.</li>
+    </ul>
   </section>
 
+  <section id="grading">
+    <h2>Grading Breakdown</h2>
+    <table>
+      <tr><th>Description</th><th>Percentage</th></tr>
+      <tr><td>Homework</td><td>10%</td></tr>
+      <tr><td>Term Project and Presentations</td><td>30%</td></tr>
+      <tr><td>Mid-Term Exam</td><td>30%</td></tr>
+      <tr><td>Final Exam</td><td>30%</td></tr>
+    </table>
+  </section>
+
+  <section id="project">
+    <h2>Term Project and Presentation</h2>
+    <p>Details on the projects and presentations, and associated deadlines will be provided in the class. Students must finalize the project topic and the corresponding presentation dates upon discussion with the instructor within the first three weeks of class (by <strong>September 11th</strong>).</p>
+  </section>
+
+  <section id="policies">
+    <h2>Policies</h2>
+    <p>Assignments and the project must be submitted on due dates. Any late submissions will be penalized at 10% per day. On-time assignments must be turned in <strong>at the beginning of class</strong> on the due dates.</p>
+  </section>
+
+  <section id="neatness">
+    <h2>Neatness</h2>
+    <p>Clarity and neatness of work is an important aspect of professionalism in engineering. To get maximum credit, lab project reports must be neatly organized, with sections clearly labeled, and calculations and assumptions shown.</p>
+  </section>
+
+  <section id="exams">
+    <h2>Exams</h2>
+    <p>The date and time for the mid-term and final exams will be announced in the class. </p>
+  </section>
+
+  <section id="integrity">
+    <h2>Academic Integrity</h2>
+    <p>
+      Students are expected to perform class activities in keeping with standards outlined in the 
+      Clemson University Statement on Academic Integrity. Appropriate action will be taken toward 
+      any student suspected of violation of the following statement:
+    </p>
+    <blockquote>
+      “As members of the Clemson University community, we have inherited Thomas Green Clemson’s 
+      vision of this institution as a ‘high seminary of learning.’ Fundamental to this vision is a 
+      mutual commitment to truthfulness, honor, and responsibility, without which we cannot earn 
+      the trust and respect of others. Furthermore, we recognize that academic dishonesty detracts 
+      from the value of a Clemson degree. Therefore, we shall not tolerate lying, cheating, or 
+      stealing in any form.”
+    </blockquote>
+  </section>
+
+  <section id="emergency">
+    <h2>Emergency Preparation</h2>
+      <p>Emergency procedures have been posted in all buildings and on all elevators. Students should review these procedures for their own safety. All students and employees should be familiar with guidelines from Clemson University Public Safety.</p>
+      <p>As members of the community, you are encouraged to:</p>
+      <ol>
+        <li>Familiarize yourself with all possible exits, safer locations, and emergency maps.</li>
+        <li>Make a plan for how you would <strong>Run, Hide, Fight</strong> in case of an active threat.</li>
+        <li>Ensure you are signed up for emergency alerts.</li>
+        <li>Download the <a href="https://www.clemson.edu/cusafety/cupd/rave-guardian/" target="_blank">Rave Guardian app</a>.</li>
+        <li>Learn more at <a href="http://www.clemson.edu/cusafety/EmergencyManagement/" target="_blank">Clemson Emergency Management</a>.</li>
+      </ol>
+  </section>
+
+  <section id="accessibility">
+    <h2>Accessibility Statement</h2>
+    <p>    It is university policy to provide, on a flexible and individualized basis, reasonable accommodations to students with disabilities. Students should contact Accessibility Services (864-656-6848) within the first month of classes to discuss specific needs.</p>
+  </section>
+
+  <section id="titleix">
+    <h2>Clemson University Title IX (Sexual Harassment) Statement</h2>
+    <p>
+      Clemson University does not discriminate on the basis of race, color, religion, sex, sexual orientation, 
+      gender, pregnancy, national origin, age, disability, veteran’s status, genetic information or protected 
+      activity in employment, admissions, or educational programs. This includes a prohibition against 
+      sexual harassment and violence under Title IX.
+    </p>
+    <p>
+      Faculty and staff are <strong>mandatory reporters</strong> of incidents of sexual harassment, sexual 
+      violence, stalking, domestic and/or relationship violence, unless the disclosure is made through 
+      a confidential resource or as part of academic work.
+    </p>
+    <p>
+      Policy details: <a href="http://www.clemson.edu/campus-life/campus-services/access/title-ix/" target="_blank">Title IX Policy</a><br>
+      Title IX Coordinator: Ms. Alesia Smith (223 Brackett Hall, 864-656-3181, alesias@clemson.edu)
+    </p>
+  </section>
 </main>
 
 <footer>
@@ -155,5 +293,3 @@
 
 </body>
 </html>
-
-
